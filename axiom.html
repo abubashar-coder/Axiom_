@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Axiom: Search Engine</title>
+  <link rel="icon" type="image/png" href="axiom.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff6ec4, #7873f5, #4adede);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      overflow: hidden;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    header {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+    header button {
+      padding: 8px 20px;
+      border: none;
+      border-radius: 25px;
+      background: #ff6ec4;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    header button:hover { background: #7873f5; }
+    .logo {
+      font-size: 5rem;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      z-index: 2;
+    }
+    .search-box {
+      display: flex;
+      background: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      width: 400px;
+      max-width: 90%;
+      z-index: 2;
+    }
+    .search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+    .search-box button {
+      border: none;
+      background: #7873f5;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .search-box button:hover { background: #4adede; }
+
+    /* Floating images */
+    .floating-img {
+      position: absolute;
+      width: 80px;
+      opacity: 0.8;
+      animation: float 12s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-50px) rotate(20deg); }
+      100% { transform: translateY(0) rotate(0deg); }
+    }
+
+    /* Footer gallery */
+    .gallery {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      gap: 15px;
+      z-index: 2;
+    }
+    .gallery img {
+      width: 60px;
+      height: 60px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">Axiom</div>
+  <form class="search-box" action="raza.html" method="GET">
+    <input type="text" name="q" placeholder="Search Axiom..." required />
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Floating decorative images -->
+  <img src="C:\Users\CHS-22\OneDrive\Desktop\aaaaaaa\axiom.png" class="floating-img" style="top:10%; left:5%;">
+  <img src="C:\Users\CHS-22\OneDrive\Desktop\aaaaaaa\axiom.png" class="floating-img" style="top:20%; right:10%; animation-delay:2s;">
+  <img src="C:\Users\CHS-22\OneDrive\Desktop\aaaaaaa\axiom.png" class="floating-img" style="bottom:20%; left:15%; animation-delay:4s;">
+  <img src="C:\Users\CHS-22\OneDrive\Desktop\aaaaaaa\axiom.png" class="floating-img" style="bottom:25%; right:20%; animation-delay:6s;">
+
+  <!-- Footer gallery -->
+  <div class="gallery">
+    <img src="https://picsum.photos/60?random=5">
+    <img src="https://picsum.photos/60?random=6">
+    <img src="https://picsum.photos/60?random=7">
+    <img src="https://picsum.photos/60?random=8">
+    <img src="https://picsum.photos/60?random=9">
+  </div>
+</body>
+</html>
